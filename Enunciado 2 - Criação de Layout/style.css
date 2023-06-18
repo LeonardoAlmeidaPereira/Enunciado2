@@ -1,57 +1,117 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container-grid{
+.container-grid {
     width: 960px;
     height: 600px;
     margin: 15px auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 30vh 70vh;
-    grid-template-areas: 
+    grid-template-areas:
         "a m"
         "a m";
 }
 
-aside{
+aside {
     grid-area: a;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    margin-top: 8px;
     padding: 20px;
 }
 
-aside > picture > img{
+aside>picture>img {
     width: 150px;
     border-radius: 50%;
     border: solid 0.5px black;
     margin-bottom: 15px;
 }
 
-aside > h1{
+aside>h1 {
     margin-bottom: 15px;
 }
 
-aside > p{
+aside>p {
     width: 30vh;
     margin-bottom: 15px;
+    text-align: center;
 }
 
-.aside ul li a{
+.aside>ul{
+    list-style-type: none;
+}
+
+.aside>ul>li {
+    padding-bottom: 16px;
+}
+
+.aside ul li a {
     margin-bottom: 10px;
     list-style-type: none;
 }
 
-main{
+main {
     height: 600px;
     border: solid 1px black;
     background-color: lightgrey;
     grid-area: m;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vh 95vh;
+    grid-template-areas:
+        "h2 h2"
+        "a1 a2";
     margin: 25px;
-    padding: 20px;
+    padding: 24px;
+}
+main>h2{
+    display: grid;
+    grid-area: h2;
+    text-align: center;
+    width: 96%;
+    margin-top: 16px;
+}
+
+article {
+    display: grid;
+    height:496px;
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 95vh;
+    text-align: center;
+    margin-top: 24px;
+}
+
+#article1{
+    grid-area: a1;
+}
+
+#article2{
+    grid-area: a2;
+    border-left: solid 0.75px black;
+}
+
+article>h3{
+    font-size: 24px;
+}
+
+article>ul{
+    height: 320px;
+    margin-top: 48px;
+}
+
+article>ul>li{
+    margin-left: 25px;
+    width: 90%;
+    padding-bottom: 24px;
+    font-size: 12px;
+    text-align: justify;
 }
